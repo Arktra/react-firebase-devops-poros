@@ -5,10 +5,16 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App-wrapper">
+    <div className="App">
       <Navbar />
-      <div className="content">
-        <h1>Bookstore Portal</h1>
+      <div className="container">
+        <header className="App-header">
+          <h1>Welcome to BookHaven</h1>
+          <p>Find your next favorite book</p>
+        </header>
+        <main>
+          <p>Browse our collection of books and discover new authors.</p>
+        </main>
       </div>
       <Footer />
     </div>
