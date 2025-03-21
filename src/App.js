@@ -4,16 +4,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App-container">
       <Navbar />
-      <div className="container">
-        <header className="App-header">
-          <h1>Welcome to BookHaven</h1>
-          <p>Discover your literary adventure</p>
-        </header>
-        <main>
-          <p>Browse our extensive collection of books from various genres and authors.</p>
-        </main>
+      <div className="main-content">
+        <h1>BookHaven Online Store</h1>
       </div>
     </div>
   );
