@@ -6,17 +6,20 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <a href="/">Bookstore</a>
+          <a href="/">BookHaven</a>
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
             <a href="/" className="navbar-link">Home</a>
           </li>
           <li className="navbar-item">
-            <a href="/books" className="navbar-link">Books</a>
+            <a href="/catalog" className="navbar-link">Catalog</a>
           </li>
           <li className="navbar-item">
-            <a href="/about" className="navbar-link">About</a>
+            <a href="/bestsellers" className="navbar-link">Bestsellers</a>
+          </li>
+          <li className="navbar-item">
+            <a href="/new-releases" className="navbar-link">New Releases</a>
           </li>
           <li className="navbar-item">
             <a href="/contact" className="navbar-link">Contact</a>
