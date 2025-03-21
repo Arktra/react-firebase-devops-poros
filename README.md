@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Bookstore App with CI/CD Pipeline
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React bookstore application with automated CI/CD pipeline using GitHub Actions for deployment to Firebase Hosting.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+The project follows a feature-branch workflow with CI/CD integration:
 
-### `npm start`
+- `main` branch: Production-ready code
+- `dev` branch: Development and integration branch
+- Feature branches: For developing new features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React-based bookstore application
+- Custom Navbar and Footer components
+- Automated testing and deployment
+- Firebase hosting integration
 
-### `npm test`
+## CI/CD Pipeline
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project uses GitHub Actions for continuous integration and deployment:
 
-### `npm run build`
+1. Automatic build triggered on push to `main` branch
+2. Unit tests run to validate code quality
+3. Successful builds are automatically deployed to Firebase Hosting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development Workflow
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Create a feature branch from `dev`:
+git checkout dev
+git checkout -b feature-name
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Make changes and commit:
+git add .
+git commit -m "Message"
+git push origin feature-name
 
-### `npm run eject`
+3. Create a Pull Request to merge into `dev`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. After PR approval and merge, create a PR from `dev` to `main` for production deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
+- Node.js and npm
+- Firebase account
+- GitHub account
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Local Development
+1. Clone the repository
+git clone https://github.com/Arktra/react-firebase-devops.git
+cd react-firebase-devops
 
-## Learn More
+2. Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start development server
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Firebase Setup
+1. Install Firebase CLI
+npm install -g firebase-tools
 
-### Code Splitting
+2. Login to Firebase
+firebase login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Initialize Firebase in your project
+firebase init
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Deployments happen automatically when changes are pushed to the `main` branch.
 
-### Making a Progressive Web App
+To deploy manually:
+npm run build
+firebase deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Live Demo
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The live application is available at: [https://react-firebase-devops-poros.web.app/](https://react-firebase-devops-poros.web.app/)
