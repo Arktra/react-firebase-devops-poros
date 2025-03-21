@@ -28,13 +28,17 @@ This project uses GitHub Actions for continuous integration and deployment:
 ## Development Workflow
 
 1. Create a feature branch from `dev`:
+```bash
 git checkout dev
 git checkout -b feature-name
+```
 
 2. Make changes and commit:
+```bash
 git add .
 git commit -m "Message"
 git push origin feature-name
+```
 
 3. Create a Pull Request to merge into `dev`
 
@@ -49,32 +53,46 @@ git push origin feature-name
 
 ### Local Development
 1. Clone the repository
+```bash
 git clone https://github.com/Arktra/react-firebase-devops.git
 cd react-firebase-devops
+```
 
 2. Install dependencies
+```bash
 npm install
+```
 
 3. Start development server
+```bash
 npm start
+```
 
 ### Firebase Setup
 1. Install Firebase CLI
+```bash
 npm install -g firebase-tools
+```
 
 2. Login to Firebase
+```bash
 firebase login
+```
 
-3. Initialize Firebase in your project
+3. Initialize Firebase in project
+```bash
 firebase init
+```
 
 ## Deployment
 
 Deployments happen automatically when changes are pushed to the `main` branch.
 
 To deploy manually:
+```bash
 npm run build
 firebase deploy
+```
 
 ## Live Demo
 
